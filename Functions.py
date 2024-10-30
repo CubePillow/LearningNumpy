@@ -17,6 +17,8 @@ print("Sign: ", np.sign(np1))
 #Trig sin cos log
 print("sin: ", np.sin(np1))
 
+print("=====================")
+
 #Copy vs View
 #View: still connected to original
 np2 = np1.view()
@@ -41,4 +43,24 @@ print(f'Original NP3: {np3}')
 np3[1] = 22
 print(f'Original NP1: {np1}')
 print(f'Changed NP3: {np3}')
+
+print("=====================")
+#Shape vs Reshape
+#create 1-d Array and get shape
+np4 = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+print(f"Shape of NP4: {np4.shape}")
+#crate 2-d Array and get shape (rows and columns)
+np5 = np.array([[1,2,3,4,5,6],[7,8,9,10,11,12]])
+print(f"Shape of NP5: {np5.shape}")
+#Reshape 2-d
+np6 = np4.reshape(3,4)
+print(f"reshape NP4 with 3*4: {np6}")
+#Reshape 3-d
+np7 = np4.reshape(2,3,2)
+print(f"reshape NP4 with 2*3*2: {np7}")
+#Flatten to 1-d
+np8 = np7.reshape(-1)
+print(f"flatten NP4: {np8}")
+
+
 
